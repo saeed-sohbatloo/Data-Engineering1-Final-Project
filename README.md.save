@@ -1,0 +1,80 @@
+echo "
+__pycache__/
+*.pyc
+*.pkl
+*.db
+*.csv
+*.xlsx
+.env
+" > .gitignore
+git add .
+git commit -m "Set up project structure"
+git push origin main
+pip install virtualenv
+python3 -m venv venv
+source venv/bin/activate
+
+pip install numpy pandas matplotlib seaborn scikit-learn jupyter
+pip freeze > requirements.txt
+git add .
+git commit -m "Set up virtual environment and installed dependencies"
+git push origin main
+jupyter notebook
+
+jupyter notebook
+
+cd Data-Engineering1-Final-Project
+mkdir data src notebooks docs
+git clone https://github.com/saeed-sohbatloo/Data-Engineering1-Final-Project.git
+jupyter notebook
+jupyter notebook
+pip install notebook
+# Data-Engineering1-Final-Project
+pip install notebook
+mkdir data src notebooks docs
+echo "
+__pycache__/
+*.pyc
+*.pkl
+*.db
+*.csv
+*.xlsx
+.env
+" > .gitignore
+git add .
+git commit -m "Set up project structure"
+git push origin main
+git add .
+git commit -m "Set up project structure"
+git push origin main
+cd Data-Engineering1-Final-Project
+mkdir data src notebooks docs
+nano README.md
+echo "
+__pycache__/
+*.pyc
+*.pkl
+*.db
+*.csv
+*.xlsx
+.env
+" > .gitignore
+git add .
+git commit -m "Set up project structure"
+git push origin main
+pip install virtualenv
+python3 -m venv venv
+source venv/bin/activate
+pip install numpy pandas matplotlib seaborn scikit-learn jupyter
+pip freeze > requirements.txt
+git add .
+git commit -m "Set up virtual environment and installed dependencies"
+git push origin main
+jupyter notebook
+pip install notebook
+jupyter notebook
+
+git add notebooks/your_notebook_name.ipynb
+git add Data Engeenering final Project.ipynb
+git status
+
