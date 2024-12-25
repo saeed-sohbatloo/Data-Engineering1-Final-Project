@@ -4,7 +4,7 @@ There are three input source files to work with. The first is the generation dat
 
 - **a)** Convert generation into energy.  
 - **b)** Create an hourly DataFrame for all the data.  
-- **c)** An overall DataFrame is created by merging all the data into a single structure. From this point onward, this unified DataFrame can be used consistently.  
+- **c)** An overall DataFrame is created by merging all the data into a single structure "df_hourly_combined". From this point onward, this unified DataFrame can be used consistently.  
 - **d)** Consistency is maintained by using the same names for variables, DataFrames, and other entities throughout the process.  
 - **e)** The share of renewable energy is calculated by dividing the generated renewable energy by the total generated energy.  
 - **f)** The share of renewable energy is calculated for hourly, monthly, and yearly timeframes.  
