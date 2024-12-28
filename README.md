@@ -1,39 +1,12 @@
-# Data-Engineering1-Final-Project
+### Notes for Task 1
 
-1. Convert datetime to Unix timestamp
-A datetime object in Python represents a specific date and time.
-Unix timestamp is the number of seconds since January 1, 1970 (UTC), often used in computing for time representation.
-Code example:
+There are three input source files to work with. The first is the generation data, which has a time frame of 15 minutes and must be converted into hourly intervals. The second is the energy price data, already provided in an hourly format. Lastly, the actual load data is also in an hourly format, aligning with the energy price data for easier integration and analysis.
 
-python
-Copy code
-from datetime import datetime
-dt = datetime(2024, 12, 16, 10, 30)  # Create a datetime object (year, month, day, hour, minute)
-unix_timestamp = dt.timestamp()      # Convert to Unix timestamp
-print("Unix Timestamp:", unix_timestamp)
-Purpose: Useful for storing or comparing time data in a standard, system-independent format.
-2. Convert Unix timestamp back to datetime
-You can reverse the process to get a human-readable datetime object from a Unix timestamp.
-If the timestamp is in seconds, Python's datetime.fromtimestamp() method can interpret it.
-Code example:
-
-python
-Copy code
-unix_timestamp = 1702725000  # Example Unix timestamp
-dt_utc = datetime.fromtimestamp(unix_timestamp, tz=timezone.utc)  # Convert to datetime in UTC
-print("Datetime in UTC:", dt_utc)
-Purpose: Makes Unix timestamps understandable in terms of dates and times.
-3. Automatically parse datetime from a CSV file
-If you have a CSV file where a column contains timestamp data, you can automatically parse it into datetime objects using Pandas.
-This eliminates the need for manual conversion.
-Code example:
-
-python
-Copy code
-import pandas as pd
-df = pd.read_csv(csv_file, parse_dates=['timestamp'])  # Automatically parses 'timestamp' column
-Purpose: Simplifies data preprocessing and ensures timestamps are in the correct format for analysis.
-Applications:
-Data Analysis: Ensures uniform time representation when analyzing trends over time.
-Data Storage: Unix timestamps are compact and widely supported across systems.
-Time Zone Handling: The conversions handle time zones, which is crucial in global applications.
+- **a)** Convert generation into energy.  
+- **b)** Create an hourly DataFrame for all the data.  
+- **c)** An overall DataFrame is created by merging all the data into a single structure "df_hourly_combined". From this point onward, this unified DataFrame can be used consistently.  
+- **d)** Consistency is maintained by using the same names for variables, DataFrames, and other entities throughout the process.  
+- **e)** The share of renewable energy is calculated by dividing the generated renewable energy by the total generated energy.  
+- **f)** The share of renewable energy is calculated for hourly, monthly, and yearly timeframes.  
+- **g)** Several types of visualizations are plotted. The best ones should be retained, and less useful ones should be removed.  
+- **h)** This part requires additional explanatory analysis to enhance understanding and insight.  
